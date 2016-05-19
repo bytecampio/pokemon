@@ -1,0 +1,152 @@
+body {
+  font-family: monospace;
+  font-size: 20px;
+}
+
+.game {
+  position: relative;
+  background-image: url('http://bit.ly/pokemonbg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  border: 3px solid black;
+  border-radius: 8px 8px 0 0;
+  height: 480px;
+  width: 800px;
+}
+
+.opponent {
+  position: relative;
+  height: 300px;
+}
+
+.opponent > .stats {
+  position: absolute;
+  top: 96px;
+  left: 40px;
+  width: 320px;
+}
+
+.opponent > .pokemon {
+  position: absolute;
+  bottom: 0;
+  right: 140px;
+  width: 100px;
+}
+
+.player {
+  position: relative;
+  height: 192px;
+}
+
+.player > .stats {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  width: 320px;
+}
+
+.player > .pokemon {
+  position: absolute;
+  left: 100px;
+  bottom: 10px;
+  width: 160px;
+}
+
+.box {
+  padding: 8px;
+  background: #333;
+  border: 3px solid black;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  color: #fff;
+  height: 120px;
+  width: 784px;
+}
+
+.box > .message {
+  position: relative;
+  float: left;
+  font-size: 24px;
+  width: 50%;
+}
+
+.box > .actions {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+
+.box > .actions > button {
+  position: relative;
+  float: left;
+  background: #666;
+  border: 3px solid #888;
+  border-radius: 4px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 14px;
+  margin: 4px;
+  padding: 16px;
+  width: calc(50% - 8px);
+  height: calc(50% - 8px);
+  outline: none !important;
+}
+
+.box > .actions > button:hover {
+  background: #777;
+  border-color: #999;
+}
+
+.box > .actions > button:active {
+  background: #555;
+  border-color: #666;
+}
+
+.stats {
+  background: #111;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+}
+
+.stats > .pokeballs {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.stats > .pokeballs > .pokeball {
+  position: relative;
+  float: left;
+  background-image: url('http://bit.ly/pokeballimg');
+  background-size: 100% 100%;
+  width: 25px;
+  height: 25px;
+}
+
+.stats > .hp-count:before {
+  content: 'HP: '
+}
+
+.stats > .hp-count {
+  float: right;
+}
+
+.stats > .hp-bar {
+  background: #3a3;
+  border: 2px solid white;
+  border-radius: 8px;
+  height: 8px;
+  margin: 8px 0;
+}
+
+.stats > .name {
+  font-weight: bold;
+}
+
+.stats > .level:before {
+  content: "LVL"
+}
