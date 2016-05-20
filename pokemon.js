@@ -1,14 +1,6 @@
 var userHP = 100;
 var opHP = 100;
-opAttacks = [flameThrower = {
-  userHP = userHP - 30;
-  if(userHP < 0) { userHP = 0}
-  document.getElementById('myHP').innerHTML = userHP;
-  document.getElementById('message').innerHTML = " Blastoise took a major hit! "
-  if(opHP === 0){
-    document.getElementById('message').innerHTML = " Charizard fainted! "
-  }
-}, ember, dragonClaw, growl];
+opAttacks = [flameThrower, dragonClaw, ember, growl];
 /* users moves */
 function waterCannon() {
   //alert("Water Cannon!");
@@ -91,7 +83,7 @@ function flameThrower() {
   if(userHP < 0) { userHP = 0}
   document.getElementById('myHP').innerHTML = userHP;
   document.getElementById('message').innerHTML = " Blastoise took a major hit! "
-  if(opHP === 0){
+  if(userHP === 0){
     document.getElementById('message').innerHTML = " Charizard fainted! "
   }
 }
@@ -101,7 +93,7 @@ function dragonClaw() {
   if(userHP < 0) { userHP = 0}
   document.getElementById('myHP').innerHTML = userHP;
   document.getElementById('message').innerHTML = " That was super effective! "
-  if(opHP === 0){
+  if(userHP === 0){
     document.getElementById('message').innerHTML = " Charizard fainted! "
   }
 }
@@ -111,7 +103,7 @@ function ember() {
   if(userHP < 0) { userHP = 0}
   document.getElementById('myHP').innerHTML = userHP;
   document.getElementById('message').innerHTML = " Direct Hit! "
-  if(opHP === 0){
+  if(userHP === 0){
     document.getElementById('message').innerHTML = " Charizard fainted! "
   }
 }
@@ -121,7 +113,7 @@ function growl() {
   if(userHP < 0) { userHP = 0}
   document.getElementById('myHP').innerHTML = userHP;
   document.getElementById('message').innerHTML = " That was a light hit... "
-  if(opHP === 0){
+  if(userHP === 0){
     document.getElementById('message').innerHTML = " Charizard fainted! "
   }
 }
@@ -129,14 +121,5 @@ function growl() {
 
 function compPokemon() {
   var move = Math.floor((Math.random() * 4) + 1);
-  move = 1;
-  if(move === 1){
-    opAttacks[0]();
-  } else if(move === 2) {
-
-  } else if(move === 3) {
-
-  } else {
-
-  }
+    opAttacks[move]();
 }
