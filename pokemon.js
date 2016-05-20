@@ -1,18 +1,29 @@
-intialHP = 50;
-function setCPU() {
-};
-setCPU();
+var userHP = 100;
+var opHP = 100;
+opAttacks = [flameThrower = {
+  userHP = userHP - 30;
+  if(userHP < 0) { userHP = 0}
+  document.getElementById('myHP').innerHTML = userHP;
+  document.getElementById('message').innerHTML = " Blastoise took a major hit! "
+  if(opHP === 0){
+    document.getElementById('message').innerHTML = " Charizard fainted! "
+  }
+}, ember, dragonClaw, growl];
 /* users moves */
 function waterCannon() {
   //alert("Water Cannon!");
   var miss = Math.floor((Math.random() * 5) + 1);
   if(miss === 1 || miss === 2) {
-    document.getElementById('message').innerHTML = " Blastoise's attack missed! "
+    document.getElementById('message').innerHTML = " Blastoise's attack missed! ";
   }
   else {
-    document.getElementById('apHP').innerHTML = '76';
-    document.getElementById('message').innerHTML = " It was super effect! "
-
+    opHP = opHP - 30;
+    if(opHP < 0){ opHP = 0}
+    document.getElementById('apHP').innerHTML = opHP;
+    document.getElementById('message').innerHTML = " It was super effective! "
+    if(opHP === 0){
+      document.getElementById('message').innerHTML = " Charizard fainted! "
+    }
   }
   compPokemon();
 }
@@ -24,9 +35,13 @@ function waterPulse() {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
-    document.getElementById('apHP').innerHTML = '56';
-    document.getElementById('message').innerHTML = " It was super effect! "
-
+    opHP = opHP - 10;
+    if(opHP < 0 ) { opHP = 0}
+    document.getElementById('apHP').innerHTML = opHP;
+    document.getElementById('message').innerHTML = " It was super effective! "
+    if(opHP === 0){
+      document.getElementById('message').innerHTML = " Charizard fainted! "
+    }
   }
   compPokemon();
 }
@@ -38,22 +53,30 @@ function surf() {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
-    document.getElementById('apHP').innerHTML = '35';
-    document.getElementById('message').innerHTML = " It was super effect! "
-
+    opHP = opHP - 20;
+    if(opHP < 0 ) { opHP = 0}
+    document.getElementById('apHP').innerHTML = opHP;
+    document.getElementById('message').innerHTML = " It was super effective! "
+    if(opHP === 0){
+      document.getElementById('message').innerHTML = " Charizard fainted! "
+    }
   }
   compPokemon();
 }
-function Bite() {
+function tackle() {
   //alert("Water Cannon!");
   var miss = Math.floor((Math.random() * 5) + 1);
   if(miss === 1 || miss === 2) {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
-    document.getElementById('apHP').innerHTML = '21';
-    document.getElementById('message').innerHTML = " It was super effect! "
-
+    opHP = opHP - 5;
+    if(opHP < 0){ opHP = 0}
+    document.getElementById('apHP').innerHTML = opHP;
+    document.getElementById('message').innerHTML = " It was super effective! "
+    if(opHP === 0){
+      document.getElementById('message').innerHTML = " Charizard fainted! "
+    }
   }
   compPokemon();
 }
@@ -64,33 +87,56 @@ function Bite() {
 
 function flameThrower() {
   //alert("Water Cannon!");
-  document.getElementById('myHP').innerHTML = '35';
+  userHP = userHP - 30;
+  if(userHP < 0) { userHP = 0}
+  document.getElementById('myHP').innerHTML = userHP;
+  document.getElementById('message').innerHTML = " Blastoise took a major hit! "
+  if(opHP === 0){
+    document.getElementById('message').innerHTML = " Charizard fainted! "
+  }
 }
 
 function dragonClaw() {
-  document.getElementById('myHP').innerHTML = '21';
+  userHP = userHP - 20;
+  if(userHP < 0) { userHP = 0}
+  document.getElementById('myHP').innerHTML = userHP;
+  document.getElementById('message').innerHTML = " That was super effective! "
+  if(opHP === 0){
+    document.getElementById('message').innerHTML = " Charizard fainted! "
+  }
 }
 
 function ember() {
-  document.getElementById('myHP').innerHTML = '96';
-
+  userHP = userHP - 10;
+  if(userHP < 0) { userHP = 0}
+  document.getElementById('myHP').innerHTML = userHP;
+  document.getElementById('message').innerHTML = " Direct Hit! "
+  if(opHP === 0){
+    document.getElementById('message').innerHTML = " Charizard fainted! "
+  }
 }
 
 function growl() {
-  document.getElementById('myHP').innerHTML = '56';
-
+  userHP = userHP - 5;
+  if(userHP < 0) { userHP = 0}
+  document.getElementById('myHP').innerHTML = userHP;
+  document.getElementById('message').innerHTML = " That was a light hit... "
+  if(opHP === 0){
+    document.getElementById('message').innerHTML = " Charizard fainted! "
+  }
 }
 
 
 function compPokemon() {
   var move = Math.floor((Math.random() * 4) + 1);
+  move = 1;
   if(move === 1){
-    flameThrower();
+    opAttacks[0]();
   } else if(move === 2) {
-    ember();
+
   } else if(move === 3) {
-    dragonClaw();
+
   } else {
-    growl();
+
   }
 }

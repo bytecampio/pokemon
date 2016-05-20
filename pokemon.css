@@ -135,13 +135,6 @@ body {
   float: right;
 }
 
-.stats > .hp-bar {
-  background: #3a3;
-  border: 2px solid white;
-  border-radius: 8px;
-  height: 8px;
-  margin: 8px 0;
-}
 
 .stats > .name {
   font-weight: bold;
