@@ -49,6 +49,55 @@ Let's learn how CSS works by example:
   background-color: #000;
 }
 ```
+The CSS syntax is different than HTML. Instead of angle brackets we use curly braces and semi-colons. Let's break down the above example.
+
+### CSS Selectors and Classes
+
+```
+.game {
+```
+Here we have our CSS selector. A CSS selector tells our browser which HTML elements it would like to style. In this example, you can note that our selector is `.game`. The dot tells our browser that we are looking for a class, and the name of that class is `game`. 
+
+####What is a class?
+
+A class is a way of identifying HTML elements that are similar, should share a common style, and/or their purpose. 
+
+To set the class of an HTML element, specify them in the `class` attribute like so:
+
+```
+<div class="orange dog">
+</div>
+```
+In this example, we give our `div` element two classes. HTML elements can have multiple classes, and should be separated by a space. The first class we provide it is `orange`. If we defined `orange` in css like so:
+
+```
+.orange {
+  background-orange: orange;
+}
+```
+This would set the background of not only that element to orange, but all elements that also have the orange class.
+
+The second class we provide is `dog`. For this example, we could assume that our `div` element is meant to represent or display a dog because we give it the `dog` class. So we could define a universal style that every dog has to follow like so:
+
+```
+.dog {
+  width: 100px;
+}
+```
+Basically, we're saying that all dogs, or all HTML elements with the `dog` class should have a width of 100 pixels. Simple enough right?
+
+But what if we want orange dogs to be only 50 pixels wide? Maybe orange dogs are always smaller. We can approach it like so:
+
+```
+.orange.dog {
+  width: 50px;
+}
+```
+Here we're providing the class `orange`, and the class `dog` combined. Note that there is _no space_ between `.orange` and `.dog`. This is how we would say if an HTML element has the class `orange` _and_ `dog` use this style. 
+
+This selector is also more specific than just `orange` or `dog`. Meaning our browser will display its properties over the others if we define all 3 examples.
+
+### Element IDs
 
 ```
 #attack {
