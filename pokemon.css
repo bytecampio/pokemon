@@ -73,7 +73,7 @@ body {
   position: absolute;
   margin-top: 30px;
   float: left;
-  width: 50%;
+  width: 25%;
   height: 100%;
 }
 .box > .continue  > button {
@@ -89,6 +89,15 @@ body {
   margin: 4px;
   padding: 16px;
   outline: none !important;
+}
+.box > .continue > button:hover {
+  background: #777;
+  border-color: #999;
+}
+
+.box > .continue > button:active {
+  background: #555;
+  border-color: #666;
 }
 
 .box > .actions {
