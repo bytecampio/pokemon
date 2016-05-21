@@ -38,6 +38,38 @@ In this example, we have an image tag. The `src` attribute is the name of the ar
 
 CSS or **C**ascading **S**tyle **S**heets is a stylesheet language that allows to to add styling to your HTML. 
 
+Things like adding a background, changing your font, and setting the sizes of HTML elements are things that can be done in CSS. 
+
+Let's learn how CSS works by example:
+
+```
+.game {
+  background-color: #000;
+}
+```
+
+```
+#attack {
+  color: orange;
+  font-family: "Times New Roman";
+}
+```
+
+```
+button {
+  border-color: blue;
+  border-style: solid;
+  border-width: 1px;
+}
+```
+
+```
+.opponent .pokemon {
+    width: 100px;
+    height: 100px;
+}
+```
+
 ##Structuring our game using HTML
 
 We'll start off with creating sectioning our game into two parts. The game and menu where we can see messages and the actions we can choose for our Pokémon.
