@@ -151,5 +151,53 @@ Example code:
 
 ##Loops
 
+Loops are one of the most powerful concepts in programming. Loops are used to execute a certain piece of code numerous times. Just like functions, loops help to clean up code as well as save time. There are three types of loops in JavaScript, for loop, while loop and do/while loop. 
+
+A loop can be used to reduce this: 
+
+ ![MacDown Screenshot](http://i.imgur.com/QPnG6Ve.png)
+
+into this:
+
+ ![MacDown Screenshot](http://i.imgur.com/67BU7sX.png)
+
+In the above for loop, there are 3 parameters. First, it shows what i is "i = 0". Second, it shows what i must be within at all times, "i < cars.length". Third, it shows the change in i, "i++", which increases i one at a time. 
+	for loop:
+		
+		for(statement 1, statement 2, statement 3) {
+			// repeat this code until statement 2 fails 
+		}
+		
+		// statement 1: sets value before loop starts 
+		// statement 2: define the condition for the loop to run
+		// statement 3: increases/decreases value. 
+		
+A while loop does the same function as a for loop but it checks the condition in a different way. 
+	while loop:
+	
+		while(condition is true) {
+			// repeat this code until conditon above is not true
+		}
+		
+	Example Code:
+	
+![MacDown Screenshot](http://i.imgur.com/iOcMTmK.png)
+
+In the code snippet above, the while loop checks the condition, "is the value of x still less than 10?". If it is, then the code whitin the while block runs. If not then the console.log does not get run. 
+
+A do/while loop is very similar to a while loop. The only difference is when the condition for the loop is checked. In while loop, the condition is checked at the beginning of the while block. In a do/while loop, the condition is checked at the end of the do/while block after the first iteration is already completed. 
+
+		do {
+			// execute some code 
+		}while(condition);
+		
+Example code:
+	
+![MacDown Screenshot](http://i.imgur.com/uWkoNOc.png)
+
+If we take a look at the above code snippet, we can see how the loop performs the first iteration of the loop before it checks the condition. 
+
+
+		
 
 
