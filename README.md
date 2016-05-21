@@ -16,7 +16,7 @@ The basic structure of HTML is as follows:
 </article>
 ```
 
-HTML tags surround themselves in angle brackets. If an HTML tag allows for other HTML tags to be inside of it, like a button or textbox inside of a form, the tags inside are its children. In our example above, the `img` tag is the child of the `article` tag.
+HTML tags surround themselves in angle brackets. If an HTML tag allows for other HTML tags to be inside of it, like an image or paragraph inside of an article, the tags inside are its children. In our example above, the `img` tag is the child of the `article` tag.
 
 Once you specify all of the children for the tag, you must close the HTML tag with an ending tag. HTML tags are closed using a forward slash (`/`) after the first angle bracket. 
 
