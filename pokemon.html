@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+  <title>Pokemon</title>
+  <script type = "text/javascript" src = "./pokemon.js"></script>
+  <link rel = "stylesheet" type = "text/css" href = "pokemon.css" />
+</head>
+
+<div class="game">
+  <div class="opponent">
+    <div class="stats">
+      <div class="pokeballs">
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+      </div>
+      <div id = "apHP" class="hp-count">100</div>
+      <span class="name">
+        Charizard
+      </span>
+      <span class="level">
+        86
+      </span>
+    </div>
+    <img class="pokemon" src="http://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif" />
+  </div>
+  <div class="player">
+    <div class="stats">
+      <div class="pokeballs">
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+        <div class="pokeball"></div>
+      </div>
+      <div id = "myHP" class="hp-count">100</div>
+      <span class="name">
+        Blastoise
+      </span>
+      <span class="level">
+        86
+      </span>
+    </div>
+    <img class="pokemon" src="http://bit.ly/blastoisegif" />
+  </div>
+</div>
+<div class="box">
+  <div id = "message" class="message">
+    What should Blastoise do?
+  </div>
+  <div class="actions">
+    <button onclick = "waterCannon()">Water Cannon</button>
+    <button onclick = "waterPulse()">Water Pulse</button>
+    <button onclick = "surf()">Surf</button>
+    <button onclick = "tackle()">Tackle</button>
+  </div>
+  <div class = "continue">
+    <button onclick = "compPokemon()">Continue</button>
+  </div>
+</div>
