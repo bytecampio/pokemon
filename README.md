@@ -22,6 +22,14 @@ Once you specify all of the children for the tag, you must close the HTML tag wi
 
 The exception to this is shown in my example with the `img` tag. In HTML, there are some tags that are self-closing. With self-closing tags, the slash is placed before the ending angle bracket, and there is no need for a closing tag. This is because those tags cannot have children. For example, the `img` tag shown above is the HTML tag for displaying an image. It logically doesn't make sense to allow another tag to be displayed inside of it, because it is an image.
 
+In my example above, we have an image tag. However, there's an issue. While we have a tag, how does the browser know what image to display? We can supply it with an attribute that gives the tag a URL or the location of the image we would like it to display.
+
+```
+<img src="http://bit.ly/charizardgif" />
+```
+
+In this example, we have an image tag. The `src` attribute is the name of the argument, in this case it's the source or location of the image we would like to display. We then tell it in quotations the location of our image, `http://bit.ly/charizardgif`.
+
 ##What is CSS?
 
 CSS or **C**ascading **S**tyle **S**heets is a stylesheet language that allows to to add styling to your HTML. 
