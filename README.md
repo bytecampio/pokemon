@@ -443,10 +443,27 @@ The same thing goes for level:
 }
 ```
 ###Adding Pokéballs
+Now to add some Pokeballs. These are just for display, the game we're building will only have one Pokemon on each side.
+
+```
+.stats .pokeballs {
+  display: inline-block;
+}
+```
+
+Woah woah woah. What is this `display` property?
 
 ####CSS Display
 
-###Adding HP
+So the `display` property in CSS specifies the type of rendering box used for an HTML element. 
+
+So what's a rendering box? There's no concise definition. But each type of rendering box tells the elements inside how to size and arrange themselves. Every element comes with its own default display value, most being `inline` or `block`. `inline` is what's used for `span` meaning elements will not break and continue on the same line. `block` is used for `div` meaning elements will break to the next line after it.
+
+`inline-block` in this case is a hybrid of the two. It will maintain the sizing properties of `block`, but keep the single-line flow of `inline`. This keeps elements better aligned.
+
+So, by setting `display` to `inline-block` each Pokeball inside of `pokeballs` will continue on the same line, left-to-right.
+
+####Positioning Pokeballs
 
 ####CSS Float
 
