@@ -461,15 +461,61 @@ So what's a rendering box? There's no concise definition. But each type of rende
 
 `inline-block` in this case is a hybrid of the two. It will maintain the sizing properties of `block`, but keep the single-line flow of `inline`. This keeps elements better aligned.
 
-So, by setting `display` to `inline-block` each Pokeball inside of `pokeballs` will continue on the same line, left-to-right.
+So, by setting `display` to `inline-block` each Pokeball inside of `pokeballs` will be able to continue on the same line, left-to-right. But it requires its children to have a certain property to do that.
 
-####Positioning Pokeballs
+####Adding Pokeballs
+
+```
+.stats .pokeballs .pokeball {
+  float: left;
+  background-image: url('http://bit.ly/pokeballimg');
+  background-size: 100% 100%;
+  width: 25px;
+  height: 25px;
+}
+```
+Here we're setting the background and size of each `pokeball`. I've introduced yet another new property: `float`. 
+
+Once we have that property set, all we need to do is add `div` elements with the class `pokeball` inside `pokeballs`
+
+```
+<div class="pokeballs">
+  <div class="pokeball"></div>
+  <div class="pokeball"></div>
+  <div class="pokeball"></div>
+</div>
+```
 
 ####CSS Float
 
+The `float` property is required in order to make elements appear from left-to-right or vice-versa. 
+
+There are 3 values for float: 
+  - `left` for left-to-right
+  - `right` for right-to-left
+  - `clear` for breaking
+
 ###Adding the rest
 
+Alright, now to finish off our stat boxes, we want our HP to be on the right. That's a simple fix using `float` again. 
+
+```
+.stats .hp-count {
+  float: right;
+}
+```
+
+But, if you notice, we have some issues with our `span` elements slipping in. We'll want to make sure those stay on their own line. To do this we can simply wrap our top line (pokeballs and hp) with a `div`.
+
+```
+<div class="top">
+  <div class="pokeballs">
+  ...
+</div>
+```
+
 ##Building our menu
+Alright! so our game looks pretty spiffy now eh?
 
 ###Displaying a message
 
