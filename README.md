@@ -96,6 +96,24 @@ Let's run through the above code. If we look at the bottom of the program, we'll
 The program with functions may seem longer and more intimidating at first but if you take a closer look, you'll see that we're able to throw in any two variables as arguments for the functions and it'll give us the result of that operation. This is the definition of **reusable** code. 
 
 ##Scopes
+Now that we've talked about functions, this would be a good time to go over the concept of scopes. Scopes, in simple terms is the set of variables that you have access to. The idea is a variable could be a global variable or a local variable. A variable declared at the beginning of the program can be accessed by any function within that program but a variable declared inside a function cannot be accessed by anything outside that function.
+
+The variable testVar is a global variable since it's declared at the beginning of the program: 
+
+![MacDown Screenshot](http://i.imgur.com/ZERrhCP.png)
+
+The variable testVar is a local variable since it's declared within a function block: 
+
+![MacDown Screenshot](http://i.imgur.com/DVpyt8t.png)
+
+Now that we've discussed global and local variables, lets take a look at **Automatically Global** variables. These are variables that are used without being declared first. for example: 
+
+![MacDown Screenshot](http://i.imgur.com/k2n3H0F.png)
+
+The variable testVar in the above code snippet is a global variable because it was assigned a value without the actual variable being declared. 
+
+
+
 
 ##Conditionals
 
