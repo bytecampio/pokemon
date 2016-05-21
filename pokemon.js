@@ -6,13 +6,21 @@ playerMove = 0;
 function waterCannon() {
   if(playerMove === 0 && userHP != 0) {
   //alert("Water Cannon!");
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1) {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! ";
   }
   else {
     document.getElementById('message').innerHTML = " Blastoise used water cannon ";
-    opHP = opHP - 30;
+    var critical = Math.floor((Math.random() * 10) + 1);
+      if(critical == 4){
+        for(var x = 0; x < 2; x++){
+          opHP = opHP - 30;
+        }
+      }
+      else{
+        opHP = opHP - 30;
+      }
     if(opHP < 0){ opHP = 0}
     document.getElementById('apHP').innerHTML = opHP;
     //document.getElementById('message').innerHTML = " Charizard1 "
@@ -28,13 +36,21 @@ function waterCannon() {
 function waterPulse() {
   if(playerMove === 0 && userHP != 0) {
   //alert("Water Cannon!");
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
     document.getElementById('message').innerHTML = " Blastoise used water pulse ";
-    opHP = opHP - 10;
+    var critical = Math.floor((Math.random() * 10) + 1);
+      if(critical == 4){
+        for(var x = 0; x < 2; x++){
+          opHP = opHP - 20;
+        }
+      }
+      else{
+        opHP = opHP - 20;
+      }
     if(opHP < 0 ) { opHP = 0}
     document.getElementById('apHP').innerHTML = opHP;
     //document.getElementById('message').innerHTML = " Charizard2 "
@@ -50,13 +66,21 @@ function waterPulse() {
 function surf() {
   if(playerMove === 0 && userHP != 0) {
   //alert("Water Cannon!");
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
     document.getElementById('message').innerHTML = " Blastoise used surf ";
-    opHP = opHP - 20;
+    var critical = Math.floor((Math.random() * 10) + 1);
+      if(critical == 4){
+        for(var x = 0; x < 2; x++){
+          opHP = opHP - 10;
+        }
+      }
+      else{
+        opHP = opHP - 10;
+      }
     if(opHP < 0 ) { opHP = 0}
     document.getElementById('apHP').innerHTML = opHP;
     //document.getElementById('message').innerHTML = " Charizard3 "
@@ -71,13 +95,21 @@ function surf() {
 function tackle() {
   if(playerMove === 0 && userHP != 0) {
   //alert("Water Cannon!");
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
     document.getElementById('message').innerHTML = " Blastoise's attack missed! "
   }
   else {
     document.getElementById('message').innerHTML = " Blastoise used tackle ";
-    opHP = opHP - 5;
+    var critical = Math.floor((Math.random() * 10) + 1);
+      if(critical == 4){
+        for(var x = 0; x < 2; x++){
+          opHP = opHP - 5;
+        }
+      }
+      else{
+        opHP = opHP - 5;
+      }
     if(opHP < 0){ opHP = 0}
     document.getElementById('apHP').innerHTML = opHP;
   //document.getElementById('message').innerHTML = " Charizard4 "
@@ -95,13 +127,13 @@ function tackle() {
 /* opponent's moves */
 
 function flameThrower() {
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
   document.getElementById('message').innerHTML = " Charizard's attack missed! "
   }
   else {
   document.getElementById('message').innerHTML = " Charizard used flame thrower "
-    var critical = Math.floor((Math.random() * 5) + 1);
+    var critical = Math.floor((Math.random() * 10) + 1);
       if(critical == 4){
         for(var x = 0; x < 2; x++){
           userHP = userHP - 30;
@@ -120,13 +152,13 @@ function flameThrower() {
 }
 
 function dragonClaw() {
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
     document.getElementById('message').innerHTML = " Charizard's attack missed! "
   }
   else {
   document.getElementById('message').innerHTML = " Charizard used dragon claw "
-  var critical = Math.floor((Math.random() * 5) + 1);
+  var critical = Math.floor((Math.random() * 10) + 1);
     if(critical == 4){
       for(var x = 0; x < 2; x++){
         userHP = userHP - 20;
@@ -145,13 +177,13 @@ function dragonClaw() {
 }
 
 function ember() {
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
     document.getElementById('message').innerHTML = " Charizard's attack missed! "
   }
   else {
   document.getElementById('message').innerHTML = " Charizard used ember "
-  var critical = Math.floor((Math.random() * 5) + 1);
+  var critical = Math.floor((Math.random() * 10) + 1);
     if(critical == 4){
       for(var x = 0; x < 2; x++){
         userHP = userHP - 10;
@@ -170,13 +202,13 @@ function ember() {
 }
 
 function growl() {
-  var miss = Math.floor((Math.random() * 5) + 1);
-  if(miss === 1 || miss === 2) {
+  var miss = Math.floor((Math.random() * 10) + 1);
+  if(miss === 1 ) {
     document.getElementById('message').innerHTML = " Charizard's attack missed! "
   }
   else {
   document.getElementById('message').innerHTML = " Charizard used growl "
-  var critical = Math.floor((Math.random() * 5) + 1);
+  var critical = Math.floor((Math.random() * 10) + 1);
     if(critical == 4){
       for(var x = 0; x < 2; x++){
         userHP = userHP - 5;
