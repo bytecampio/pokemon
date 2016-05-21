@@ -97,7 +97,7 @@ Here we're providing the class `orange`, and the class `dog` combined. Note that
 
 This selector is also more specific than just `orange` or `dog`. Meaning our browser will display its properties over the others if we define all 3 examples.
 
-### Element IDs
+### Select Element by ID
 
 ```
 #attack {
@@ -105,7 +105,16 @@ This selector is also more specific than just `orange` or `dog`. Meaning our bro
   font-family: "Times New Roman";
 }
 ```
+In this example we'll talk about selecting a specific element for styling. Let's say we have an image, it's a special button for attacking. We only want this specific button to have this style. Instead of using a class, we'll use an ID. An ID is a unique identifier for a HTML element that allows us to single out that specific element. We can set this attribute similar to a class:
 
+```
+<button id="attack"></button>
+```
+The only difference is, we're only allowed to give an element one ID. So based on our examples, our button has the id `attack`. In our CSS, we'll tell our browser that we want to select an ID. So we use the hash symbol (`#`) followed by our ID. This will tell the browser to style our button to have orange text, and to use the Times New Roman font. 
+
+It's generally a good idea to use classes instead of IDs for applying styles. It makes reading and understanding code easier.
+
+### Element Selectors
 ```
 button {
   border-color: blue;
@@ -113,7 +122,9 @@ button {
   border-width: 1px;
 }
 ```
+Now we look at the case of when we want to style all of a specific type of tag or element. In this case, we want to style every single button on our page. To do this, we do not specify a dot or a hash. Instead we specify the tag's name. In this example, we are telling our browsers to style every button with a blue border, that's a solid line, and it has a 1 pixel width all around the button.
 
+### Styling children
 ```
 .opponent .pokemon {
   width: 100px;
