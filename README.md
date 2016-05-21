@@ -350,6 +350,98 @@ With some trial and error, we arrive at these values:
 
 ##Creating the stat boxes
 
+Now that we have our pokemon positioned, we need to show their stats! Let's add some HTML for their stat boxes.
+
+Inside each character, we need a stat box with pokeballs, hp, pokemon name, and pokemon level.
+
+```
+<div class="opponent">
+  <div class="stats">
+  	<div class="pokeballs">
+  	</div>
+  	<div class="hp-count">
+  	  100
+  	</div>
+  	<span class="name">
+     Charizard
+  	</span>
+  	<span class="level">
+  	  86
+  	</span>
+  </div>
+  ...
+</div>
+```
+
+Okay, so we have a couple things to talk about.
+
+First, HP count and Level. Notice how I only put numbers, I didn't add a label like 'HP: 100'. We'll be doing some CSS magic to make that happen.
+
+Second, the `span` tag. In HTML, the `span` tag is just like the `div` tag. Only instead of the tags after it breaking to a new line, they stay on the same line as the previous tag.
+
+###Position, margins, padding, and style stat boxes
+
+To help us position our stat boxes, let's give them a style:
+
+```
+.stats {
+  background: #111;
+  border: 2px solid black;
+  border-radius: 8px;
+  color: white;
+  padding: 12px;
+}
+```
+
+There are two new properties here. `border-radius` and `padding`. `border-radius` simply rounds the endges of our element based on the value we give. `padding` will add some space inside our element so that our text and such aren't on the edge.
+
+The opposite of `padding` is `margin`, where instead of adding space on the inside, it adds space on the outside to keep it away from other elements.
+
+<img src="http://www.mrwebmaster.it/images/guide/css/boxmodel.png" />
+
+####Positioning the stat boxes
+Since we already set `player` and `opponent`'s `position`s to `relative` we can also use `absolute` `position`ing here.
+Stat boxes are generally positioned more towards the `top` and the opposite side of the Pokemon.
+
+
+```
+.opponent .stats {
+  position: absolute;
+  top: 96px;
+  left: 40px;
+  width: 320px;
+}
+
+.player .stats {
+  position: absolute;
+  top: 48px;
+  right: 40px;
+  width: 320px;
+}
+```
+
+With some trial, error, and eyeballing you'll come up with numbers similar to this.
+
+###CSS Pseudo Classes
+
+Now, let's add some labels to our HP and Level. In CSS3, Pseudo Classes were introduced. These pseudo classes allow us to manipulate certain states of an element that are not accessible via HTML.
+
+The pseudo class we will be using is `:before`. When we use the `:before` pseudo class, we can set the CSS `content` property which will insert text before our element. For example:
+
+```
+.stats .hp-count:before {
+  content: 'HP: '
+}
+```
+Adds an 'HP: ' before the number we inputed. Meaning all we have to do is change our number, and not have to worry about the label changing.
+
+The same thing goes for level:
+
+```
+.stats .level:before {
+  content: 'LVL '
+}
+```
 ###Adding Pokéballs
 
 ####CSS Display
