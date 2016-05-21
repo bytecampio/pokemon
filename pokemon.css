@@ -69,6 +69,27 @@ body {
   font-size: 24px;
   width: 50%;
 }
+.box > .continue {
+  position: absolute;
+  margin-top: 30px;
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.box > .continue  > button {
+  position: relative;
+  float: left;
+  background: #666;
+  border: 3px solid #888;
+  border-radius: 4px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 14px;
+  margin: 4px;
+  padding: 16px;
+  outline: none !important;
+}
 
 .box > .actions {
   position: relative;
@@ -103,7 +124,6 @@ body {
   background: #555;
   border-color: #666;
 }
-
 .stats {
   background: #111;
   border: 2px solid black;
