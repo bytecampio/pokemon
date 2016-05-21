@@ -74,7 +74,13 @@ Other possible ways of declarying an array and things to watchout for:
 
 ![MacDown Screenshot](http://i.imgur.com/KBjUTfw.png)
 
+##Functions:
 
+##Scopes
+
+##Conditionals
+
+##Loops
 
 
 
