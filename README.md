@@ -112,10 +112,40 @@ Now that we've discussed global and local variables, lets take a look at **Autom
 
 The variable testVar in the above code snippet is a global variable because it was assigned a value without the actual variable being declared. 
 
-
-
-
 ##Conditionals
+Conditionals are used to perform different actions based on different conditions. There are two types of conditionals in JavaScript and many other languages. If/Else conditional blocks and Switch blocks. The If/Else block is like follows: 
+
+		if(condition 1 is true) {
+			// execute this code 
+		}
+		else if(condition 2 is true) {
+			// execute this code 
+		}
+		else {
+			// if above conditions are all false, execute this code. 
+		}
+		
+Example code: 
+![MacDown Screenshot](http://i.imgur.com/OtUHJse.png)
+
+A Switch block would be as follows: 
+
+		switch(expression) {
+			case n: 
+				code block
+				break;
+			case m: 
+				code block
+				break;
+			case j:
+				code block
+				break;
+			default:
+				code block
+		}
+		
+Example code:
+![MacDown Screenshot](http://i.imgur.com/1XAd9cv.png)
 
 ##Loops
 
