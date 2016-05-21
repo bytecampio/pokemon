@@ -200,13 +200,50 @@ Next we'll add our Pokemon. We'll use an `img` tag to display our images on the 
 ```
 I supplied each `img` tag with the URLs of our appropriate image in their `src` attribute. I had these URLs made beforehand, but you can use any image you want as long as it's uploaded on the internet with a URL you can use.
 
-##Setting some dimensions using CSS
+##Formatting our view using CSS
+
+### Setting our base dimensions
 
 As you may notice, things don't look quite like a game, or even like boxes. Let's set some sizes using CSS so that we can start visualizing our game better.
 
 Let's set the height of our `.game` to `480px` and `800px`. This will give our game a fixed size, making it easier to design in for now. 
 
-##Adding a background and Pokémon
+```
+.game {
+  height: 480px;
+  width: 800px;
+}
+```
+
+We'll apply the same width, but a smaller height for the menu:
+
+```
+.menu {
+  height: 120px;
+  width: 800px;
+}
+```
+
+###Adding backgrounds
+
+Now, let's add some color to our boring white landscape. 
+
+We'll use an image of a background from Pokemon battle sequence for our game's background. 
+
+```
+.game {
+	background-image: url('http://bit.ly/pokemonbg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	...
+}
+```
+
+Here we're setting the `background-image` property to the url of our background image, we're telling our browser that the size of our background should be `100%` the height and width of our `.game`, and that we don't want our background to repeat.
+
+###Positioning our Pokemon
+
+Now that we have our background, we can position our Pokemon into their battle positions. 
 
 ##Creating the stat boxes
 
