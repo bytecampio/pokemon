@@ -75,6 +75,25 @@ Other possible ways of declarying an array and things to watchout for:
 ![MacDown Screenshot](http://i.imgur.com/KBjUTfw.png)
 
 ##Functions:
+Functions are one of the fundamental concepts in programming. A function combines many instructions into one single line. This makes for cleaner, reusable code. On top of that it also helps us to save time during testing. 
+
+The idea behind a function is that we take a piece of code and assign that piece of code a name so we can call it any time we want within our program. In a practical setting these pieces of codes typically does some sort of activity. 
+
+A program of simple arithmetic without using any functions: 
+
+![MacDown Screenshot](http://i.imgur.com/FeU0Uao.png)
+
+Same program rewritten with functions:
+
+![MacDown Screenshot](http://i.imgur.com/4U5zuZc.png)
+
+Let's run through the above code. If we look at the bottom of the program, we'll see that the operations that we did in our previous program have been moved to individual function blocks. The **return** state throws the result of the operation into whatever variable we set to receive it. If we go up one section above where the functions are created, we'll see where the functions are being called. Each function is being called and the result of the operation that's being returned is being thrown into it's respected variable. Like shown below: 
+
+![MacDown Screenshot](http://i.imgur.com/2aO6ABt.png)
+
+![MacDown Screenshot](http://i.imgur.com/Kj1MBQa.png)
+
+The program with functions may seem longer and more intimidating at first but if you take a closer look, you'll see that we're able to throw in any two variables as arguments for the functions and it'll give us the result of that operation. This is the definition of **reusable** code. 
 
 ##Scopes
 
