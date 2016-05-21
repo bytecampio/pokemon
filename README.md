@@ -58,6 +58,16 @@ The CSS syntax is different than HTML. Instead of angle brackets we use curly br
 ```
 Here we have our CSS selector. A CSS selector tells our browser which HTML elements it would like to style. In this example, you can note that our selector is `.game`. The dot tells our browser that we are looking for a class, and the name of that class is `game`. 
 
+In the next line we have the following:
+
+```
+background-color: #000;
+```
+In this case, `background-color` is a property that we want to change, and `#000` is the value that we want to change the background color to. `#000` is a hexadecimal representation of a color. In programming, we frequently use hexadecimal colors to get specific colors. These colors are in RGB. So, `#000` translate to 0 amount of red, 0 amount of green, and 0 amount of blue. Thus, `#000` is black. 
+
+CSS also allows for us to use some color names like black or red, but using hex allows us to have more flexibility and customization.
+
+
 ####What is a class?
 
 A class is a way of identifying HTML elements that are similar, should share a common style, and/or their purpose. 
@@ -131,6 +141,10 @@ Now we look at the case of when we want to style all of a specific type of tag o
   height: 100px;
 }
 ```
+
+What if we're in the scenario where we want to style a child of an element? In this example, we want to style the `pokemon` that is owned by, or is the child of our `opponent`. Only our opponent, not our own `pokemon`. We'll specify the parent class `.opponent` and then _with_ a space we'll specify the child class `.pokemon`. So, our `opponent`'s `pokemon` will have a width and height of 100 pixels;
+
+This child class can be replaced by an ID, an element type, or any other selector as well. There are other ways of selecting children elements to be more specific, but for this tutorial we'll just be using this method to keep things simple.
 
 ##Structuring our game using HTML
 
