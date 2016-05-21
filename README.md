@@ -519,7 +519,91 @@ Alright! so our game looks pretty spiffy now eh?
 
 ###Displaying a message
 
+To display a message, all we have to do is add a simple `div` with a class, this may be a good place to put an ID for as well since we only have one message.
+
+```
+<div class="menu">
+  <div class="message">
+    What should Blastoise do?
+  </div>
+</div>
+```
+
 ###Creating our action buttons
+
+Next we'll need to create an area for our actions. Simply add another `div` with the class `actions` below `message`.
+
+Inside of `actions`, add four buttons with attack names.
+
+```
+<div class="menu">
+  <div class="message">
+    What should Blastoise do?
+  </div>
+  <div class="actions">
+    <button>Water Cannon</button>
+    <button>Water Pulse</button>
+    <button>Surf</button>
+    <button>Bite</button>
+  </div>
+</div>
+```
+
+###Styling our menu
+Now we need to actually style our menu. Those OS default buttons don't do our game justice.
+
+####Split the menu
+Let's split the menu in two. On the left we should have our message, and on the right we should have our actions.
+
+```
+.menu .message {
+  float: left;
+  font-size: 24px;
+  width: 50%;
+}
+
+.menu .actions {
+  float: left;
+  width: 50%;
+}
+```
+
+All we did here was set the `float` to `left`, so that we could split the menu into left and right segments. Remember, without float we can't have left-to-right layouts.
+
+####Styling the buttons
+```
+.menu .actions button {
+  position: relative;
+  float: left;
+  background: #666;
+  border: 3px solid #888;
+  border-radius: 4px;
+  color: #fff;
+  font-family: monospace;
+  font-size: 20px;
+  line-height: 14px;
+  margin: 4px;
+  padding: 16px;
+  width: calc(50% - 8px);
+  height: calc(50% - 8px);
+}
+
+.menu .actions button, 
+.menu .actions button:hover, 
+.menu .actions button:active {
+  outline: none;
+} 
+
+.menu .actions button:hover {
+  background: #777;
+  border-color: #999;
+}
+
+.menu .actions button:active {
+  background: #555;
+  border-color: #666;
+}
+```
 
 ##Adding functionality
 
