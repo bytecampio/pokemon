@@ -150,12 +150,14 @@ This child class can be replaced by an ID, an element type, or any other selecto
 
 We'll start off with creating sectioning our game into two parts. The game and menu where we can see messages and the actions we can choose for our Pokémon.
 
-To do this we need to create two HTML `div` elements. 
+To do this we need to create two HTML `div` elements with their appropriate classes.
+
+In HTML, a `div` element is section of the document. `div` stands for division, meaning by default when you use a `div` element, elements after it will break onto a new line instead of staying in the same line. `div`s are the most common HTML tag you will see and use.
 
 ```
 <div class="game">
 </div>
-<div class="box">
+<div class="menu">
 </div>
 ```
 ##Adding a background and Pokémon
