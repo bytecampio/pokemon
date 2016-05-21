@@ -1,5 +1,7 @@
 #Creating a basic online Pokémon game
 
+<img src="http://i.imgur.com/c448U9D.jpg" />
+
 In this tutorial we will be creating a simple Pokémon game where you will play as Blastoise and are currently in battle with a fierce Charizard. The game will be created using HTML, CSS, and JavaScript. 
 
 We will be using [CodePen](https://codepen.io) to write our code in. It will give us an easy place to write our code and see our changes quickly.
@@ -65,8 +67,8 @@ button {
 
 ```
 .opponent .pokemon {
-    width: 100px;
-    height: 100px;
+  width: 100px;
+  height: 100px;
 }
 ```
 
