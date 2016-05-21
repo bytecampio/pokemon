@@ -276,6 +276,78 @@ Since the opponent has more room than the player, we can give it something like 
 
 ####Absolute positioning
 
+In CSS, all elements have a `position` property. By default the value of `position` is `static`, meaning the elements you write are displayed in the order you wrote them.
+
+However, there are other options. The option we will be using to position our pokemon is `absolute`. Absolute allows us to specify the location of our element relative to the first non-static parent using anchors. 
+
+Okay, so that was a bunch of words that might have made a lot or no sense. Basically: We can tell our image how far it should be from the top, left, right, and bottom if its first parent that isn't static.
+
+Remember, by default elements are static. So, if there is no non-static parent, it will position itself based on the document. 
+
+I don't expect you to grasp this concept immediately. Most people only grasp positioning after lots of trial and error and experience. There are many in-depth articles on CSS layout positioning as well.
+
+#####So, let's position our Pokemon.
+```
+.opponent .pokemon {
+  position: absolute;
+}
+
+.player .pokemon {
+  position: absolute;
+}
+```
+
+Now, just like I said above, if there isn't a parent that's non-static, it will position itself based on the document. So, we need to create a parent that's non-static.
+
+We'll set our `player` and `opponent` areas to be `relative`, this will allow our `absolute` positioned `pokemon` to stay within and anchor to our character's respective areas. `relative` is very simlar to `static`, only it allows modifying the anchor points similar to an `absolute` positioned element.
+
+```
+.opponent {
+  position: relative;
+}
+
+.player {
+  position: relative;
+}
+```
+
+#####Anchor points
+
+So, I've said the words Anchor points a few times now. You might not have an idea on what those are. Anchor points tell elements how far they should be from a certain side, and which sides they should base its position on.
+
+For example:
+```
+left: 20px;
+```
+
+This would tell the specified element that its anchor point should be 20 pixels from the left of its normal positioin. For `absolute` that would mean its first non-static parent, and for `relative` that would be its normal position.
+
+Let's position Blastoise (the player's pokemon). It'll be on the bottom of its area for sure, and it's much further left than it is right. Therefore it would be smart to set the anchors of Blastoise to be the `bottom` and the `left`.
+
+We'll set our Blastoise a little bit higher than the `bottom`, say, 10 pixels, and we'll position him so that he's inside his spot on the background. This takes some trial and error, but 100 pixels away from the `left` works out well if we make the `width` of Blastoise 160 pixels.
+
+```
+.player .pokemon {
+  position: absolute;
+  left: 100px;
+  bottom: 10px;
+  width: 160px;
+}
+```
+
+Now we need to position Charizard (our opponent's monster). Charizard is in the distance, so let's make its `width` smaller; 100 pixels will do. Charizard is leaning more towards the `right` than the left. Now, remember we split our game into two sections. Meaning Charizard should be positioned closely to the `bottom` of the `opponent` section since that section ends right below Charizard's place.
+
+With some trial and error, we arrive at these values:
+
+```
+.opponent .pokemon {
+  position: absolute;
+  bottom: 0;
+  right: 140px;
+  width: 100px;
+}
+```
+
 ##Creating the stat boxes
 
 ###Adding Pokéballs
