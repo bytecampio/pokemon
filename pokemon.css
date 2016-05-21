@@ -19,14 +19,14 @@ body {
   height: 300px;
 }
 
-.opponent > .stats {
+.opponent .stats {
   position: absolute;
   top: 96px;
   left: 40px;
   width: 320px;
 }
 
-.opponent > .pokemon {
+.opponent .pokemon {
   position: absolute;
   bottom: 0;
   right: 140px;
@@ -38,14 +38,14 @@ body {
   height: 192px;
 }
 
-.player > .stats {
+.player .stats {
   position: absolute;
   top: 48px;
   right: 40px;
   width: 320px;
 }
 
-.player > .pokemon {
+.player .pokemon {
   position: absolute;
   left: 100px;
   bottom: 10px;
@@ -63,20 +63,20 @@ body {
   width: 784px;
 }
 
-.box > .message {
+.box .message {
   position: relative;
   float: left;
   font-size: 24px;
   width: 50%;
 }
-.box > .continue {
+.box .continue {
   position: absolute;
   margin-top: 30px;
   float: left;
   width: 25%;
   height: 100%;
 }
-.box > .continue  > button {
+.box .continue  button {
   position: relative;
   float: left;
   background: #666;
@@ -90,24 +90,24 @@ body {
   padding: 16px;
   outline: none !important;
 }
-.box > .continue > button:hover {
+.box .continue button:hover {
   background: #777;
   border-color: #999;
 }
 
-.box > .continue > button:active {
+.box .continue button:active {
   background: #555;
   border-color: #666;
 }
 
-.box > .actions {
+.box .actions {
   position: relative;
   float: left;
   width: 50%;
   height: 100%;
 }
 
-.box > .actions > button {
+.box .actions button {
   position: relative;
   float: left;
   background: #666;
@@ -124,12 +124,12 @@ body {
   outline: none !important;
 }
 
-.box > .actions > button:hover {
+.box .actions button:hover {
   background: #777;
   border-color: #999;
 }
 
-.box > .actions > button:active {
+.box .actions button:active {
   background: #555;
   border-color: #666;
 }
@@ -141,13 +141,13 @@ body {
   padding: 12px;
 }
 
-.stats > .pokeballs {
+.stats .pokeballs {
   position: relative;
   display: inline-block;
   vertical-align: middle;
 }
 
-.stats > .pokeballs > .pokeball {
+.stats .pokeballs .pokeball {
   position: relative;
   float: left;
   background-image: url('http://bit.ly/pokeballimg');
@@ -156,19 +156,19 @@ body {
   height: 25px;
 }
 
-.stats > .hp-count:before {
+.stats .hp-count:before {
   content: 'HP: '
 }
 
-.stats > .hp-count {
+.stats .hp-count {
   float: right;
 }
 
 
-.stats > .name {
+.stats .name {
   font-weight: bold;
 }
 
-.stats > .level:before {
+.stats .level:before {
   content: "LVL"
 }
