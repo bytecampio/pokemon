@@ -160,6 +160,52 @@ In HTML, a `div` element is section of the document. `div` stands for division, 
 <div class="menu">
 </div>
 ```
+
+### What we need
+
+Let's take a minute to think about the HTML elements we need. We need four buttons for our attacks, and a place for a message in our menu. For the game, we need
+
+  - two images for our Pokemon
+  - a place to display our HP (Health)
+  - the name and level of our Pokemon
+  - how many Pokemon we have
+  - and a box to keep all of that information tidy
+
+We'll also need a way to tell apart our opponent's stuff from our stuff, so it would be good if we had two different parents: `player` and `opponent` so we can know which child belongs to who.
+
+First we'll add our parents for each player:
+
+```
+<div class="game">
+  <div class="opponent">
+  </div>
+  <div class="player>
+  </div>
+</div>
+```
+
+### Adding our Pokemon
+
+Next we'll add our Pokemon. We'll use an `img` tag to display our images on the screen and give them the class `pokemon`.
+
+```
+<div class="game">
+  <div class="opponent">
+    <img class="pokemon" src="http://bit.ly/charizardgif" />
+  </div>
+  <div class="player>
+    <img class="pokemon" src="http://bit.ly/blastoisegif" />
+  </div>
+</div>
+```
+I supplied each `img` tag with the URLs of our appropriate image in their `src` attribute. I had these URLs made beforehand, but you can use any image you want as long as it's uploaded on the internet with a URL you can use.
+
+##Setting some dimensions using CSS
+
+As you may notice, things don't look quite like a game, or even like boxes. Let's set some sizes using CSS so that we can start visualizing our game better.
+
+Let's set the height of our `.game` to `480px` and `800px`. This will give our game a fixed size, making it easier to design in for now. 
+
 ##Adding a background and Pokémon
 
 ##Creating the stat boxes
