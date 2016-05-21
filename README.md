@@ -126,6 +126,7 @@ Conditionals are used to perform different actions based on different conditions
 		}
 		
 Example code: 
+
 ![MacDown Screenshot](http://i.imgur.com/OtUHJse.png)
 
 A Switch block would be as follows: 
@@ -145,6 +146,7 @@ A Switch block would be as follows:
 		}
 		
 Example code:
+
 ![MacDown Screenshot](http://i.imgur.com/1XAd9cv.png)
 
 ##Loops
