@@ -254,8 +254,46 @@ We'll also want a background for our menu. A nice gray color should do. I freque
 
 Now that we have our backgrounds, we can position our Pokemon into their battle positions. 
 
+####Setting boundaries
+
+<img src="http://i.imgur.com/l6bJS1N.jpg" />
+
+If we look at our game with the background, we can clearly see that one area is only occupied by the opponent, and the other only by the player. To make things clearer, what we can do is use our already existing `player` and `opponent` elements to split the game into two portions. The top will be for the `opponent`, and the bottom for the `player.
+
+We can set these boundaries by splitting the height of the `game` between the two characters.
+
+Since the opponent has more room than the player, we can give it something like 300 pixels, and the remaining player 180 pixels.
+
+```
+.opponent {
+  height: 300px;
+}
+
+.player {
+  height: 180px; 
+}
+```
+
+####Absolute positioning
+
 ##Creating the stat boxes
 
-##Adding Pokéballs
+###Adding Pokéballs
 
-##Adding action buttons for our Pokémon
+####CSS Display
+
+###Adding HP
+
+####CSS Float
+
+###Adding the rest
+
+##Building our menu
+
+###Displaying a message
+
+###Creating our action buttons
+
+##Adding functionality
+
+Now we've completed our game's scene! But, we don't have any functionality! It may look like a game, but if I press those buttons nothing happens! Unfortunately we cannot add functionality just by using HTML and CSS. We have to introduce another language, JavaScript.
