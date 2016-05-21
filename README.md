@@ -232,18 +232,27 @@ We'll use an image of a background from Pokemon battle sequence for our game's b
 
 ```
 .game {
-	background-image: url('http://bit.ly/pokemonbg');
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	...
+  background-image: url('http://bit.ly/pokemonbg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  ...
 }
 ```
 
 Here we're setting the `background-image` property to the url of our background image, we're telling our browser that the size of our background should be `100%` the height and width of our `.game`, and that we don't want our background to repeat.
 
+We'll also want a background for our menu. A nice gray color should do. I frequently like to use #333 as my gray color for backgrounds:
+
+```
+.menu {
+  background-color: #333;
+  ...
+}
+```
+
 ###Positioning our Pokemon
 
-Now that we have our background, we can position our Pokemon into their battle positions. 
+Now that we have our backgrounds, we can position our Pokemon into their battle positions. 
 
 ##Creating the stat boxes
 
