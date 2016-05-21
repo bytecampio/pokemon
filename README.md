@@ -1,2 +1,47 @@
-# Pokémon
-A beginner HTML, CSS, and JavaScript Pokémon game and workshop
+#Creating a basic online Pokémon game
+
+In this tutorial we will be creating a simple Pokémon game where you will play as Blastoise and are currently in battle with a fierce Charizard. The game will be created using HTML, CSS, and JavaScript. 
+
+We will be using [CodePen](https://codepen.io) to write our code in. It will give us an easy place to write our code and see our changes quickly.
+
+##What is HTML?
+
+HTML, or **H**yper**T**ext **M**arkup **L**anguage is a markup language used to define the structure and elements on a web page. Everything like buttons, menus, images, etc. are defined using HTML. 
+
+The basic structure of HTML is as follows:
+
+```
+<article>
+  <img />
+</article>
+```
+
+HTML tags surround themselves in angle brackets. If an HTML tag allows for other HTML tags to be inside of it, like a button or textbox inside of a form, the tags inside are its children. In our example above, the `img` tag is the child of the `article` tag.
+
+Once you specify all of the children for the tag, you must close the HTML tag with an ending tag. HTML tags are closed using a forward slash (`/`) after the first angle bracket. 
+
+The exception to this is shown in my example with the `img` tag. In HTML, there are some tags that are self-closing. With self-closing tags, the slash is placed before the ending angle bracket, and there is no need for a closing tag. This is because those tags cannot have children. For example, the `img` tag shown above is the HTML tag for displaying an image. It logically doesn't make sense to allow another tag to be displayed inside of it, because it is an image.
+
+##What is CSS?
+
+CSS or **C**ascading **S**tyle **S**heets is a stylesheet language that allows to to add styling to your HTML. 
+
+##Structuring our game using HTML
+
+We'll start off with creating sectioning our game into two parts. The game and menu where we can see messages and the actions we can choose for our Pokémon.
+
+To do this we need to create two HTML `div` elements. 
+
+```
+<div class="game">
+</div>
+<div class="box">
+</div>
+```
+##Adding a background and Pokémon
+
+##Creating the stat boxes
+
+##Adding Pokéballs
+
+##Adding action buttons for our Pokémon
