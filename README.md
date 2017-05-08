@@ -36,7 +36,7 @@ In my example above, we have an image tag. However, there's an issue. While we h
 
 In this example, we have an image tag. The `src` attribute is the name of the argument, in this case it's the source or location of the image we would like to display. We then tell it in quotations the location of our image, `http://bit.ly/charizardgif`.
 
-##What is CSS?
+## What is CSS?
 
 CSS or **C**ascading **S**tyle **S**heets is a stylesheet language that allows to to add styling to your HTML. 
 
@@ -146,7 +146,7 @@ What if we're in the scenario where we want to style a child of an element? In t
 
 This child class can be replaced by an ID, an element type, or any other selector as well. There are other ways of selecting children elements to be more specific, but for this tutorial we'll just be using this method to keep things simple.
 
-##Structuring our game using HTML
+## Structuring our game using HTML
 
 We'll start off with creating sectioning our game into two parts. The game and menu where we can see messages and the actions we can choose for our Pokémon.
 
@@ -200,7 +200,7 @@ Next we'll add our Pokemon. We'll use an `img` tag to display our images on the 
 ```
 I supplied each `img` tag with the URLs of our appropriate image in their `src` attribute. I had these URLs made beforehand, but you can use any image you want as long as it's uploaded on the internet with a URL you can use.
 
-##Formatting our view using CSS
+## Formatting our view using CSS
 
 ### Setting our base dimensions
 
