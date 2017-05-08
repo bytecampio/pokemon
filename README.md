@@ -1,4 +1,4 @@
-#Creating a basic online Pokémon game
+# Creating a basic online Pokémon game
 
 <img src="http://i.imgur.com/c448U9D.jpg" />
 
@@ -6,7 +6,7 @@ In this tutorial we will be creating a simple Pokémon game where you will play 
 
 We will be using [CodePen](https://codepen.io) to write our code in. It will give us an easy place to write our code and see our changes quickly.
 
-##What is HTML?
+## What is HTML?
 
 HTML, or **H**yper**T**ext **M**arkup **L**anguage is a markup language used to define the structure and elements on a web page. Everything like buttons, menus, images, etc. are defined using HTML. 
 
@@ -68,7 +68,7 @@ In this case, `background-color` is a property that we want to change, and `#000
 CSS also allows for us to use some color names like black or red, but using hex allows us to have more flexibility and customization.
 
 
-####What is a class?
+#### What is a class?
 
 A class is a way of identifying HTML elements that are similar, should share a common style, and/or their purpose. 
 
@@ -224,7 +224,7 @@ We'll apply the same width, but a smaller height for the menu:
 }
 ```
 
-###Adding backgrounds
+### Adding backgrounds
 
 Now, let's add some color to our boring white landscape. 
 
@@ -250,11 +250,11 @@ We'll also want a background for our menu. A nice gray color should do. I freque
 }
 ```
 
-###Positioning our Pokemon
+### Positioning our Pokemon
 
 Now that we have our backgrounds, we can position our Pokemon into their battle positions. 
 
-####Setting boundaries
+#### Setting boundaries
 
 <img src="http://i.imgur.com/l6bJS1N.jpg" />
 
@@ -274,7 +274,7 @@ Since the opponent has more room than the player, we can give it something like 
 }
 ```
 
-####Absolute positioning
+#### Absolute positioning
 
 In CSS, all elements have a `position` property. By default the value of `position` is `static`, meaning the elements you write are displayed in the order you wrote them.
 
@@ -286,7 +286,7 @@ Remember, by default elements are static. So, if there is no non-static parent, 
 
 I don't expect you to grasp this concept immediately. Most people only grasp positioning after lots of trial and error and experience. There are many in-depth articles on CSS layout positioning as well.
 
-#####So, let's position our Pokemon.
+##### So, let's position our Pokemon.
 ```
 .opponent .pokemon {
   position: absolute;
@@ -311,7 +311,7 @@ We'll set our `player` and `opponent` areas to be `relative`, this will allow ou
 }
 ```
 
-#####Anchor points
+##### Anchor points
 
 So, I've said the words Anchor points a few times now. You might not have an idea on what those are. Anchor points tell elements how far they should be from a certain side, and which sides they should base its position on.
 
@@ -348,7 +348,7 @@ With some trial and error, we arrive at these values:
 }
 ```
 
-##Creating the stat boxes
+## Creating the stat boxes
 
 Now that we have our pokemon positioned, we need to show their stats! Let's add some HTML for their stat boxes.
 
@@ -379,7 +379,7 @@ First, HP count and Level. Notice how I only put numbers, I didn't add a label l
 
 Second, the `span` tag. In HTML, the `span` tag is just like the `div` tag. Only instead of the tags after it breaking to a new line, they stay on the same line as the previous tag.
 
-###Position, margins, padding, and style stat boxes
+### Position, margins, padding, and style stat boxes
 
 To help us position our stat boxes, let's give them a style:
 
@@ -399,7 +399,7 @@ The opposite of `padding` is `margin`, where instead of adding space on the insi
 
 <img src="http://www.mrwebmaster.it/images/guide/css/boxmodel.png" />
 
-####Positioning the stat boxes
+#### Positioning the stat boxes
 Since we already set `player` and `opponent`'s `position`s to `relative` we can also use `absolute` `position`ing here.
 Stat boxes are generally positioned more towards the `top` and the opposite side of the Pokemon.
 
@@ -422,7 +422,7 @@ Stat boxes are generally positioned more towards the `top` and the opposite side
 
 With some trial, error, and eyeballing you'll come up with numbers similar to this.
 
-###CSS Pseudo Classes
+### CSS Pseudo Classes
 
 Now, let's add some labels to our HP and Level. In CSS3, Pseudo Classes were introduced. These pseudo classes allow us to manipulate certain states of an element that are not accessible via HTML.
 
@@ -442,7 +442,7 @@ The same thing goes for level:
   content: 'LVL '
 }
 ```
-###Adding Pokéballs
+### Adding Pokéballs
 Now to add some Pokeballs. These are just for display, the game we're building will only have one Pokemon on each side.
 
 ```
@@ -453,7 +453,7 @@ Now to add some Pokeballs. These are just for display, the game we're building w
 
 Woah woah woah. What is this `display` property?
 
-####CSS Display
+#### CSS Display
 
 So the `display` property in CSS specifies the type of rendering box used for an HTML element. 
 
@@ -463,7 +463,7 @@ So what's a rendering box? There's no concise definition. But each type of rende
 
 So, by setting `display` to `inline-block` each Pokeball inside of `pokeballs` will be able to continue on the same line, left-to-right. But it requires its children to have a certain property to do that.
 
-####Adding Pokeballs
+#### Adding Pokeballs
 
 ```
 .stats .pokeballs .pokeball {
@@ -486,7 +486,7 @@ Once we have that property set, all we need to do is add `div` elements with the
 </div>
 ```
 
-####CSS Float
+#### CSS Float
 
 The `float` property is required in order to make elements appear from left-to-right or vice-versa. 
 
@@ -495,7 +495,7 @@ There are 3 values for float:
   - `right` for right-to-left
   - `clear` for breaking
 
-###Adding the rest
+### Adding the rest
 
 Alright, now to finish off our stat boxes, we want our HP to be on the right. That's a simple fix using `float` again. 
 
@@ -514,10 +514,10 @@ But, if you notice, we have some issues with our `span` elements slipping in. We
 </div>
 ```
 
-##Building our menu
+## Building our menu
 Alright! so our game looks pretty spiffy now eh?
 
-###Displaying a message
+### Displaying a message
 
 To display a message, all we have to do is add a simple `div` with a class, this may be a good place to put an ID for as well since we only have one message.
 
@@ -529,7 +529,7 @@ To display a message, all we have to do is add a simple `div` with a class, this
 </div>
 ```
 
-###Creating our action buttons
+### Creating our action buttons
 
 Next we'll need to create an area for our actions. Simply add another `div` with the class `actions` below `message`.
 
@@ -549,10 +549,10 @@ Inside of `actions`, add four buttons with attack names.
 </div>
 ```
 
-###Styling our menu
+### Styling our menu
 Now we need to actually style our menu. Those OS default buttons don't do our game justice.
 
-####Split the menu
+#### Split the menu
 Let's split the menu in two. On the left we should have our message, and on the right we should have our actions.
 
 ```
@@ -570,7 +570,7 @@ Let's split the menu in two. On the left we should have our message, and on the 
 
 All we did here was set the `float` to `left`, so that we could split the menu into left and right segments. Remember, without float we can't have left-to-right layouts.
 
-####Styling the buttons
+#### Styling the buttons
 ```
 .menu .actions button {
   position: relative;
@@ -605,11 +605,11 @@ All we did here was set the `float` to `left`, so that we could split the menu i
 }
 ```
 
-##Adding functionality
+## Adding functionality
 
 Now we've completed our game's scene! But, we don't have any functionality! It may look like a game, but if I press those buttons nothing happens! Unfortunately we cannot add functionality just by using HTML and CSS. We have to introduce another language, JavaScript.
 
-#Introduction to JavaScript
+# Introduction to JavaScript
 
 ![JavaScript logo](http://cdn.tutorialzine.com/wp-content/uploads/2015/12/javascript.png)
 
@@ -633,17 +633,24 @@ In Traditional programming languages like C++ and Java, you would have to specif
 	
 In JavaScript, it's a lot simpiler. You use type var to define any type. like so: 
 
-	var testInteger = 2;	var testCharacter = ‘x’;			var testString = “Programming is cool”;
+	var testInteger = 2;
+	var testCharacter = ‘x’;		
+	var testString = “Programming is cool”;
 	
 Now, in JavaScript there are two other datatypes, const and let. Const is used when you know the data you are storing will not chagne throughout your whole program. Let is used when there is a chance of the data changing. Now, for best practices it's always better to use const and let instead of var. 
 
-###booleans:
+### Booleans:
 Booleans are data types that represent true or false. In other languages booleans are declared like: 
 
-	bool testBoolean = true;	bool testBoolean2 = false;  In JavaScript:
+	bool testBoolean = true;
+	bool testBoolean2 = false;  
 
-	Var testBoolean = true; 	testBoolean2 = false; 
-##Arithmetic:
+In JavaScript:
+
+	Var testBoolean = true; 
+	testBoolean2 = false; 
+
+## Arithmetic:
 Another essential part of programming is Arithmetic. To do this, we have arithmetic operators: 
 
 ![MacDown Screenshot](http://i.imgur.com/muyYZ3X.png)
@@ -652,13 +659,13 @@ Example usage in code:
 
 ![MacDown Screenshot](http://i.imgur.com/2GYeHjh.png)
 
-##Comments: 
+## Comments: 
 **//** is used to write comments in the program to explain parts of hte code. this is done so anyone that may view your code will have an easier time understhanding what's going on. 
 /* ... */ is used for large blocks of texts. For example: 
 
 ![MacDown Screenshot](http://i.imgur.com/u8xYf7F.png)
 
-##Arrays
+## Arrays
 Imagine a case where we need to store 5 inteers. In a normal case we'd say the following: 
 
 ![MacDown Screenshot](http://i.imgur.com/9jhyI78.png)
@@ -685,7 +692,7 @@ Other possible ways of declarying an array and things to watchout for:
 
 ![MacDown Screenshot](http://i.imgur.com/KBjUTfw.png)
 
-##Functions:
+## Functions:
 Functions are one of the fundamental concepts in programming. A function combines many instructions into one single line. This makes for cleaner, reusable code. On top of that it also helps us to save time during testing. 
 
 The idea behind a function is that we take a piece of code and assign that piece of code a name so we can call it any time we want within our program. In a practical setting these pieces of codes typically does some sort of activity. 
@@ -706,7 +713,7 @@ Let's run through the above code. If we look at the bottom of the program, we'll
 
 The program with functions may seem longer and more intimidating at first but if you take a closer look, you'll see that we're able to throw in any two variables as arguments for the functions and it'll give us the result of that operation. This is the definition of **reusable** code. 
 
-##Scopes
+## Scopes
 Now that we've talked about functions, this would be a good time to go over the concept of scopes. Scopes, in simple terms is the set of variables that you have access to. The idea is a variable could be a global variable or a local variable. A variable declared at the beginning of the program can be accessed by any function within that program but a variable declared inside a function cannot be accessed by anything outside that function.
 
 The variable testVar is a global variable since it's declared at the beginning of the program: 
@@ -723,7 +730,7 @@ Now that we've discussed global and local variables, lets take a look at **Autom
 
 The variable testVar in the above code snippet is a global variable because it was assigned a value without the actual variable being declared. 
 
-##Conditionals
+## Conditionals
 Conditionals are used to perform different actions based on different conditions. There are two types of conditionals in JavaScript and many other languages. If/Else conditional blocks and Switch blocks. The If/Else block is like follows: 
 
 		if(condition 1 is true) {
@@ -760,7 +767,7 @@ Example code:
 
 ![MacDown Screenshot](http://i.imgur.com/1XAd9cv.png)
 
-##Loops
+## Loops
 
 Loops are one of the most powerful concepts in programming. Loops are used to execute a certain piece of code numerous times. Just like functions, loops help to clean up code as well as save time. There are three types of loops in JavaScript, for loop, while loop and do/while loop. 
 
