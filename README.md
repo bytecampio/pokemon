@@ -621,9 +621,10 @@ Web Development consist of three main parts, HTML, CSS and JavaScript. Html hand
 
 ## Data Types:
 The most basic concept in programming are Data Types. Data Types represent the types of data a computer is able to process using some computer program. Some types include: 
-#####**int: integer**
-#####**char: character** 
-#####**String: sequence of characters** 
+
+- **int: integer**
+- **char: character** 
+- **String: sequence of characters** 
 
 In Traditional programming languages like C++ and Java, you would have to specify the specific types you'll be using. Like so: 
 
